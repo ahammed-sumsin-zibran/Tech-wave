@@ -123,9 +123,6 @@ nav {
     .btn i {
       color: #fff;
     }
-    .hamburger {
-      display: none;
-    }
   }
 }
 
@@ -204,6 +201,7 @@ nav {
       display: flex;
       gap: 15px;
       justify-content: center;
+      align-items: center;
 
       .btn {
         padding: 12px 22px;
@@ -218,6 +216,7 @@ nav {
 
       .spotify {
         color: #fff;
+        letter-spacing: 1px;
 
         i {
           color: #fff;
@@ -229,6 +228,7 @@ nav {
         border: 1px solid var(--green-txt-color);
         background: transparent;
         color: var(--green-txt-color);
+        letter-spacing: 1px;
 
         i {
           color: var(--green-txt-color);
@@ -351,7 +351,6 @@ nav {
 }
 
 #episode {
-  display: none;
   margin: 100px 0;
 
   .cards {
@@ -376,6 +375,7 @@ nav {
     color: #fff;
     font-size: var(--h1-font-size);
     text-align: center;
+    justify-content: center;
     margin-bottom: 40px;
   }
   .container {
