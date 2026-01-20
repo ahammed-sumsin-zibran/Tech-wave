@@ -185,7 +185,7 @@
           p {
             text-align: center;
             white-space: nowrap;
-            font-size: var(--p-font-size);
+            font-size: 12px;
           }
         }
       }
@@ -195,7 +195,7 @@
   /* card section style starts here */
   #card-section {
     .container {
-      margin: 120px auto;
+      margin: 80px auto;
 
       h2 {
         color: #fff;
