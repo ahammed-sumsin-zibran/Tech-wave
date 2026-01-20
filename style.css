@@ -1,10 +1,10 @@
 /* ! important notes for examine */
-/* alert! dear Honurable examine i am using nested css */
+/* alert! dear Honurable MENTOR i am using nested css */
 
-/* import font link */
+/*? import font link */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-/* universal style */
+/* ?universal style */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@
   /* border: 2px solid red; */
 }
 
-/* root style */
+/* ?ROOT STYLE */
 :root {
   --h1-font-size: 48px;
   --h2-font-size: 32px;
@@ -34,7 +34,8 @@
   );
 }
 
-/* shared style */
+/* ?SHARED STYLE */
+
 .container {
   width: var(--width-primary);
   max-width: var(--max-width);
@@ -82,10 +83,15 @@ p {
 
 body {
   background-color: #230e3d;
-  border: 2px solid transparent;
 }
 
-/* navbar style starts here */
+.hamburger {
+  display: none;
+}
+/* ==================================================
+            *NAVBAR style starts here*
+   ================================================== */
+
 nav {
   border-bottom: 2px solid #402567;
   background: #1a0b2e;
@@ -116,6 +122,35 @@ nav {
         a {
           color: var(--p-txt-color);
           text-decoration: none;
+          position: relative;
+          padding-bottom: 5px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--green-txt-color);
+            transition: width 0.3s ease;
+            color: #fff;
+            -webkit-transition: width 0.3s ease;
+            -moz-transition: width 0.3s ease;
+            -ms-transition: width 0.3s ease;
+            -o-transition: width 0.3s ease;
+          }
+          &:hover {
+            color: #fff;
+            &::after {
+              width: 100%;
+              border-radius: 100px;
+              -webkit-border-radius: 100px;
+              -moz-border-radius: 100px;
+              -ms-border-radius: 100px;
+              -o-border-radius: 100px;
+            }
+          }
         }
       }
     }
@@ -126,7 +161,10 @@ nav {
   }
 }
 
-/* banner style starts here */
+/* ==================================================
+            *BANNER style starts here*
+   ================================================== */
+
 #banner {
   height: 100vh;
   background: url(./assets/hero-bg.png);
@@ -137,9 +175,7 @@ nav {
   justify-content: center;
   align-items: center;
   position: relative;
-  /* overflow: hidden; */
 
-  /* Content */
   .content {
     text-align: center;
 
@@ -166,7 +202,6 @@ nav {
         width: 450px;
         height: 450px;
         border-radius: 50%;
-        /* background: var(--linear-gradient); */
         position: relative;
 
         img {
@@ -239,11 +274,12 @@ nav {
   }
 }
 
+/* ==================================================
+            *Animation style here*
+        *color animation in mic-circle[banner]*
+   ================================================== */
+
 .mic-circle {
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  border: 8px solid #2a186c;
   background: linear-gradient(
     45deg,
     rgba(247, 233, 63, 1) 10%,
@@ -266,7 +302,11 @@ nav {
     background-position: 0% 50%;
   }
 }
-/* ABOUT style starts here */
+
+/* ==================================================
+            *ABOUT style starts here*
+   ================================================== */
+
 #about {
   background: #1a0b2e;
   .container {
@@ -296,8 +336,6 @@ nav {
       justify-content: space-between;
 
       .single-stats {
-        /* border: 2px solid red; */
-
         h3 {
           color: var(--green-txt-color);
           font-size: var(--h2-font-size);
@@ -314,7 +352,10 @@ nav {
   }
 }
 
-/* card section style starts here */
+/* ==================================================
+            *CHOSE US style starts here*
+   ================================================== */
+
 #card-section {
   .container {
     margin: 120px auto;
@@ -377,7 +418,126 @@ nav {
   }
 }
 
-/* meet our host section style starts here  */
+/* ==================================================
+            *EPISODES style starts here*
+   ================================================== */
+
+#episodes {
+  background: #1a0b2e;
+
+  .container {
+    padding: 120px 0 60px;
+    h2 {
+      text-align: center;
+      font-size: var(--h1-font-size);
+      margin-bottom: 40px;
+      color: #fff;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+
+      .card {
+        background-color: #23103a;
+        border-radius: 16px;
+        overflow: hidden;
+        text-decoration: none;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+
+        /* HOVER EFFECT */
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+
+          .play-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+          }
+
+          .card-img img {
+            opacity: 1;
+          }
+        }
+        /* END */
+
+        a .card-img {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+          }
+
+          .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: var(--linear-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+            i {
+              color: #fff;
+              font-size: 20px;
+            }
+          }
+        }
+
+        .card-text {
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: #ffffff;
+          }
+          p {
+            color: var(--p-txt-color);
+            margin-bottom: 20px;
+          }
+
+          .time {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            span {
+              color: var(--green-txt-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==================================================
+          *MEET OUR HOST style starts here*
+   ================================================== */
+
 #host {
   background: #1a0b2e;
   padding: 60px 0 120px;
@@ -433,9 +593,11 @@ nav {
   }
 }
 
-/* footer style starts here  */
+/* ==================================================
+          *FOOTER style starts here*
+   ================================================== */
+
 footer {
-  /* display: none; */
   background: url(./assets/footer-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -474,7 +636,6 @@ footer {
         display: flex;
         align-items: center;
         gap: 60px;
-        /* border: 2px solid red; */
 
         li {
           list-style: none;
@@ -494,120 +655,6 @@ footer {
     p {
       color: var(--p-txt-color);
       text-align: center;
-    }
-  }
-}
-
-/* feature section style starts here */
-#episodes {
-  background: #1a0b2e;
-
-  .container {
-    padding: 120px 0 60px;
-    h2 {
-      text-align: center;
-      font-size: var(--h1-font-size);
-      margin-bottom: 40px;
-      color: #fff;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
-
-      .card {
-        background-color: #23103a; /* Slightly lighter purple card bg */
-        border-radius: 16px;
-        overflow: hidden;
-        text-decoration: none; /* Removes link underline */
-        color: inherit;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-        display: flex;
-        flex-direction: column;
-
-        &:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-
-          .play-btn {
-            transform: translate(-50%, -50%) scale(1.1);
-          }
-
-          .card-img img {
-            opacity: 1;
-          }
-        }
-
-        a .card-img {
-          position: relative;
-          width: 100%;
-          overflow: hidden;
-
-          img {
-            width: 100%;
-            height: 100%;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-          }
-
-          .play-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            background: var(--linear-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s ease;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-
-            i {
-              color: #fff;
-              font-size: 20px;
-            }
-          }
-        }
-
-        .card-text {
-          padding: 24px;
-          display: flex;
-          flex-direction: column;
-          flex-grow: 1;
-          h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-            line-height: 1.4;
-            color: #ffffff;
-          }
-          p {
-            font-size: 0.9rem;
-            color: var(--p-txt-color);
-            margin-bottom: 20px;
-          }
-
-          .time {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            img {
-            }
-            span {
-              color: var(--green-txt-color);
-            }
-          }
-        }
-      }
     }
   }
 }

@@ -1,77 +1,17 @@
 @media (max-width: 576px) {
-  /* root style */
+  /*? root style */
   :root {
     --h1-font-size: 32px;
     --h2-font-size: 22px;
     --p-font-size: 15px;
 
     --width-primary: 90%;
-    --max-width: 1400px;
-
-    --card-bg-color: #2a0f4d;
-    --green-txt-color: #00ff88;
-    --p-txt-color: hsla(0, 0%, 100%, 0.63);
-
-    --linear-gradient: linear-gradient(
-      45deg,
-      rgba(247, 233, 63, 1) 10%,
-      rgba(251, 9, 180, 1) 50%,
-      rgba(145, 0, 248, 1) 100%
-    );
   }
 
-  /* shared style */
-  .container {
-    width: var(--width-primary);
-    max-width: var(--max-width);
-    margin: 0 auto;
-  }
+  /* ==================================================
+            *NAVBAR style starts here*
+   ================================================== */
 
-  .card {
-    background: var(--card-bg-color);
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
-  }
-
-  .btn {
-    border: none;
-    padding: 12px 16px;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
-    background: var(--linear-gradient);
-    color: #fff;
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    gap: 7px;
-  }
-
-  i {
-    background: linear-gradient(
-      40deg,
-      rgba(247, 233, 63, 1) 35%,
-      rgba(251, 9, 180, 1) 50%,
-      rgba(145, 0, 248, 1) 75%
-    );
-    color: transparent;
-    background-clip: text;
-  }
-  p {
-    line-height: 1.5;
-  }
-
-  body {
-    background-color: #230e3d;
-    border: 2px solid transparent;
-  }
-
-  /* navbar style starts here */
   nav {
     .container {
       padding: 30px 0;
@@ -89,25 +29,21 @@
     }
   }
 
-  /* banner style starts here */
+  /* ==================================================
+            *BANNER style starts here*
+   ================================================== */
+
   #banner {
     height: 50vh;
-    background-size: cover;
     position: relative;
 
     .content {
-      text-align: center;
-
       .microphone {
-        margin-top: 20px;
-        display: inline-block;
         margin-top: 60px;
 
         .badge {
-          position: absolute;
           top: 5px;
           right: 5px;
-          background: var(--green-txt-color);
           padding: 6px 18px;
           font-size: 16px;
         }
@@ -124,12 +60,10 @@
       }
 
       h1 {
-        font-size: var(--h1-font-size);
         margin-bottom: 10px;
       }
 
       p {
-        font-size: var(--p-font-size);
         white-space: wrap;
         max-width: 400px;
         margin: 0 auto 25px;
@@ -142,22 +76,14 @@
           padding: 12px 20px;
           font-size: 14px;
         }
-
-        .subscribe {
-          border: 1px solid var(--green-txt-color);
-          background: transparent;
-          color: var(--green-txt-color);
-
-          i {
-            color: var(--green-txt-color);
-            font-size: 20px;
-          }
-        }
       }
     }
   }
 
-  /* ABOUT style starts here */
+  /* ==================================================
+            *ABOUT style starts here*
+   ================================================== */
+
   #about {
     background: #1a0b2e;
     .container {
@@ -174,8 +100,6 @@
         gap: 40px;
 
         .single-stats {
-          /* border: 2px solid red; */
-
           h3 {
             color: var(--green-txt-color);
             font-size: 40px;
@@ -192,20 +116,15 @@
     }
   }
 
-  /* card section style starts here */
+  /* ==================================================
+            *CHOSE US style starts here*
+   ================================================== */
+
   #card-section {
     .container {
       margin: 80px auto;
 
-      h2 {
-        color: #fff;
-        font-size: var(--h1-font-size);
-        text-align: center;
-        margin-bottom: 40px;
-      }
       .cards {
-        color: #fff;
-        display: grid;
         gap: 30px;
         grid-template-areas:
           "audio"
@@ -216,16 +135,10 @@
 
         .card {
           padding: 30px;
-          display: flex;
           gap: 16px;
-          flex-direction: column;
-          justify-content: center;
           align-items: start;
           h3 {
             font-size: 24px;
-          }
-          p {
-            color: var(--p-txt-color);
           }
         }
 
@@ -238,7 +151,39 @@
     }
   }
 
-  /* meet our host section style starts here  */
+  /* ==================================================
+            *EPISODES style starts here*
+   ================================================== */
+
+  #episodes {
+    .container {
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        .card {
+          display: flex;
+          flex-direction: column;
+
+          .card-text {
+            h3 {
+              font-size: 19px;
+            }
+            p {
+              color: var(--p-txt-color);
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ==================================================
+          *MEET OUR HOST style starts here*
+   ================================================== */
+
   #host {
     padding: 60px 0 120px;
     h2 {
@@ -249,58 +194,34 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 24px;
-      border-radius: 40px;
-      -webkit-border-radius: 40px;
-      -moz-border-radius: 40px;
-      -ms-border-radius: 40px;
-      -o-border-radius: 40px;
-      /* padding: 4px; */
 
       .textual {
         display: flex;
         flex-direction: column;
         align-items: center;
-        h3 {
-          font-size: var(--h2-font-size);
-          color: #fff;
-        }
 
         p {
-          color: hsla(0, 0%, 100%, 0.63);
           text-align: center;
           width: 100%;
-          line-height: 1.5;
-          margin: 16px 0;
         }
 
         .icons {
-          i {
-            font-size: 20px;
-            font-weight: 900;
-            border: 2px solid #533c72;
-            padding: 10px;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-          }
+          gap: 10px;
         }
       }
     }
   }
 
-  /* footer style starts here  */
-  footer {
-    /* display: none; */
+  /* ==================================================
+            *FOOTER style starts here*
+   ================================================== */
 
+  footer {
     background-position: center;
     height: 18vh;
     margin: 50px 0;
 
     .containerr {
-      /* width: 300px; */
       top: 54%;
       left: 50%;
 
@@ -308,7 +229,6 @@
         font-size: 35px;
       }
       .icons {
-        /* border: 2px solid red; */
         margin: 10px 0;
 
         ul {
@@ -322,11 +242,8 @@
           gap: 10px;
 
           li {
-            /* border: 2px solid red; */
             list-style: none;
             align-items: center;
-
-            /* margin-right: 12px; */
 
             a {
               color: #fff;
@@ -343,119 +260,12 @@
           }
         }
       }
+
       p {
         color: var(--p-txt-color);
         text-align: center;
         font-size: 13px;
         white-space: nowrap;
-      }
-    }
-  }
-
-  /* feature section style starts here */
-  #episodes {
-    background: #1a0b2e;
-
-    .container {
-      padding: 120px 0 60px;
-      h2 {
-        text-align: center;
-        font-size: var(--h1-font-size);
-        margin-bottom: 40px;
-        color: #fff;
-      }
-
-      .cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 30px;
-
-        .card {
-          overflow: hidden;
-
-          display: flex;
-          flex-direction: column;
-
-          &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-
-            .play-btn {
-              transform: translate(-50%, -50%) scale(1.1);
-            }
-
-            .card-img img {
-              opacity: 1;
-            }
-          }
-
-          a .card-img {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-
-            img {
-              width: 100%;
-              height: 100%;
-              opacity: 0.8;
-              transition: opacity 0.3s;
-            }
-
-            .play-btn {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 50px;
-              height: 50px;
-              background: var(--linear-gradient);
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              transition: transform 0.2s ease;
-              -webkit-transform: translate(-50%, -50%);
-              -moz-transform: translate(-50%, -50%);
-              -ms-transform: translate(-50%, -50%);
-              -o-transform: translate(-50%, -50%);
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-
-              i {
-                color: #fff;
-                font-size: 20px;
-              }
-            }
-          }
-
-          .card-text {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            h3 {
-              font-size: 22px;
-              margin-bottom: 12px;
-              line-height: 1.4;
-              color: #ffffff;
-            }
-            p {
-              font-size: 0.9rem;
-              color: var(--p-txt-color);
-              margin-bottom: 20px;
-            }
-
-            .time {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              img {
-              }
-              span {
-                color: var(--green-txt-color);
-              }
-            }
-          }
-        }
       }
     }
   }
