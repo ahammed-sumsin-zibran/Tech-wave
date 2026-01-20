@@ -166,7 +166,7 @@ nav {
         width: 450px;
         height: 450px;
         border-radius: 50%;
-        background: var(--linear-gradient);
+        /* background: var(--linear-gradient); */
         position: relative;
 
         img {
@@ -239,6 +239,33 @@ nav {
   }
 }
 
+.mic-circle {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  border: 8px solid #2a186c;
+  background: linear-gradient(
+    45deg,
+    rgba(247, 233, 63, 1) 10%,
+    rgba(251, 9, 180, 1) 50%,
+    rgba(145, 0, 248, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+  -webkit-animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /* ABOUT style starts here */
 #about {
   background: #1a0b2e;
@@ -350,23 +377,6 @@ nav {
   }
 }
 
-#episode {
-  margin: 100px 0;
-
-  .cards {
-    width: var(--width-primary);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    .card {
-      /* height: 440px; */
-
-      iframe {
-        width: 100%;
-      }
-    }
-  }
-}
 /* meet our host section style starts here  */
 #host {
   background: #1a0b2e;

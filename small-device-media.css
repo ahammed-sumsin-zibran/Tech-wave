@@ -3,7 +3,7 @@
   :root {
     --h1-font-size: 32px;
     --h2-font-size: 22px;
-    --p-font-size: 16px;
+    --p-font-size: 15px;
 
     --width-primary: 90%;
     --max-width: 1400px;
@@ -101,7 +101,7 @@
       .microphone {
         margin-top: 20px;
         display: inline-block;
-        margin-bottom: 20px;
+        margin-top: 60px;
 
         .badge {
           position: absolute;
@@ -178,7 +178,7 @@
 
           h3 {
             color: var(--green-txt-color);
-            font-size: 35px;
+            font-size: 40px;
             text-align: center;
           }
 
@@ -294,56 +294,50 @@
   /* footer style starts here  */
   footer {
     /* display: none; */
-    background: url(./assets/footer-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 450px;
-    position: relative;
+
+    background-position: center;
+    height: 18vh;
+    margin: 50px 0;
 
     .containerr {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
+      /* width: 300px; */
       top: 54%;
       left: 50%;
 
       h2 {
-        color: #fff;
-        font-size: 60px;
-        text-align: center;
-
-        span {
-          background: linear-gradient(
-            0deg,
-            rgba(247, 233, 63, 1) 00%,
-            rgba(251, 9, 180, 1) 40%,
-            rgba(145, 0, 248, 1) 100%
-          );
-          color: transparent;
-          background-clip: text;
-        }
+        font-size: 35px;
       }
       .icons {
-        margin: 32px 0;
+        /* border: 2px solid red; */
+        margin: 10px 0;
+
         ul {
+          width: 200px;
+          margin: 10px auto 0;
           display: flex;
+          flex-wrap: wrap;
+          grid-template-columns: 1fr 1fr;
           align-items: center;
-          gap: 60px;
-          /* border: 2px solid red; */
+          justify-content: center;
+          gap: 10px;
 
           li {
+            /* border: 2px solid red; */
             list-style: none;
+            align-items: center;
+
+            /* margin-right: 12px; */
+
             a {
               color: #fff;
               text-decoration: none;
+              white-space: nowrap;
+              font-size: 14px;
 
               i {
                 color: #fff;
-                font-size: 20px;
-                margin-right: 8px;
+                font-size: 15px;
+                margin-right: 5px;
               }
             }
           }
@@ -352,6 +346,8 @@
       p {
         color: var(--p-txt-color);
         text-align: center;
+        font-size: 13px;
+        white-space: nowrap;
       }
     }
   }

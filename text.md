@@ -72,7 +72,7 @@ position: relative;
 
 
 
-            <a href="https://youtu.be/1IxG7ywSNXk" target="_blank" class="card">
+            <a href="h" target="_blank" class="card">
                 <div class="image-wrapper">
                     <img src="./assets/sundar pichai.jpg" alt="Podcast Episode 1">
                     <div class="play-btn">
@@ -90,7 +90,7 @@ position: relative;
             </a>
 
 
-            <a href="https://youtu.be/RMAux-sD1bA" target="_blank" class="card">
+            <a href="" target="_blank" class="card">
                 <div class="image-wrapper">
                     <img src="./assets/maxresdefault.jpg" alt="Podcast Episode 3">
                     <div class="play-btn">
@@ -98,8 +98,8 @@ position: relative;
                     </div>
                 </div>
                 <div class="card-content">
-                    <h3>Smartest Way To Use AI: Powerful Words, Tools & Next Revolution | Sowmay Jain | Raj Shamani</h3>
-                    <p>AI is rewriting how we build, work, and create value. In this episode, Sowmay Jain—Founder of Upsurge Labs and Bhindi, and Co-founder of Instadapp—breaks down where real opportunities in AI exist today, why messaging and productivity apps are still wide open, and how software is being rebuilt from scratch. From AI-driven businesses to a future that blurs the line between humans and machines, this conversation explores what’s coming next—and what’s already here.</p>
+                    <h3></h3>
+                    <p></p>
                     <div class="meta">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                         <span>51 min</span>
