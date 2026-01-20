@@ -123,6 +123,9 @@ nav {
     .btn i {
       color: #fff;
     }
+    .hamburger {
+      display: none;
+    }
   }
 }
 
@@ -486,7 +489,7 @@ footer {
 }
 
 /* feature section style starts here */
-#featured-section {
+#episodes {
   background: #1a0b2e;
 
   .container {
